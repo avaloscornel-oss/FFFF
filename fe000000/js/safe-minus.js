@@ -6,6 +6,7 @@ Decimal.prototype.safeMinus = function (x) {
 }
 
 let marginForSafeMinus = function (x) {
+  if (x.gte(Decimal.pow(10, 9e15))) return Decimal.MAX_VALUE
   return x.times(1e-15 * x.max(2).log2());
 }
 
