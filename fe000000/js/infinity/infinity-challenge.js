@@ -185,7 +185,7 @@ let InfinityChallenge = {
   // This is another theoretically problematic but practically probably-fine reward.
   // I think it's slightly more likely to be a problem than the previous one, though.
   infinityChallenge6Reward() {
-    return 1 + Math.log2(Math.max(InfinityStars.amount().log(2), 1)) / 512;
+    return 1 + Math.log2(Math.max(InfinityStars.amount().log(2), 1)) / 128;
   },
   infinityChallenge8PurchasesLeft() {
     return 7 - player.stats.purchasesThisInfinity + 9 * player.stats.purchasesThisInfinityByType[8];
