@@ -164,7 +164,7 @@ let InfinityChallenge = {
     return Math.min(player.stats.timeSincePurchase / 8, 1);
   },
   infinityChallenge4Reward() {
-    return Math.pow(1 + player.stats.timeSinceInfinity / 64,2);
+    return Math.pow(1 + player.stats.timeSinceInfinity,2);
   },
   infinityChallenge5Pow() {
     return Math.min(1, Math.log2(Math.max(Stars.amount().log(2), 1)) / 16);
