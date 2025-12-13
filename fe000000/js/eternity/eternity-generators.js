@@ -40,7 +40,7 @@ let EternityGenerator = function (i) {
       if (EternityChallenge.isEternityChallengeRunning(8)) {
         return new Decimal(0);
       }
-      let perPurchaseMultiplier = Math.pow(2, EternityUpgrade(1).effect() / 8) *
+      let perPurchaseMultiplier = Math.pow(2, EternityUpgrade(1).effect()) *
         (i === 8 ? ComplexityChallenge.getComplexityChallengeReward(5) : 1);
       let factors = [
         Decimal.pow(perPurchaseMultiplier, this.bought()),
