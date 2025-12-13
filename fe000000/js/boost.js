@@ -163,7 +163,7 @@ let Boost = {
     // This almost doesn't matter because reaching boost power in first eternity
     // is practically impossible.
     if (PrestigeLayerProgress.hasReached('eternity')) {
-      return Studies.theoremsFrom(Math.log2(this.bestBoostPower()), 3);
+      return Studies.theoremsFrom(Math.log2(this.bestBoostPower()), 3)-3;
     } else {
       return 0;
     }
