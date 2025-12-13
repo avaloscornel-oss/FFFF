@@ -177,7 +177,7 @@ let InfinityChallenge = {
   // the eternity update), mostly because I didn't want it to get to ^16 and for
   // infinity generator multipliers from other sources to thus be 3x as strong.
   infinityChallenge5Reward() {
-    return 1 + Math.sqrt(Math.log2(Math.max(Stars.amount().log(2) / 16384, 1)));
+    return Math.sqrt(Math.log2(Math.max(Stars.amount().log(2) / 16384, 1)));
   },
   infinityChallenge6PrestigePowerExponent() {
     return 1 / (1 + player.stats.prestigesThisInfinity % 2);
