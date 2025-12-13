@@ -38,7 +38,7 @@ let InfinityGenerator = function (i) {
         return new Decimal(0);
       }
       let factors = [
-        EternityChallenge.isEternityChallengeRunning(7) ? new Decimal(1) : Decimal.pow(2, this.bought() / 8),
+        EternityChallenge.isEternityChallengeRunning(7) ? new Decimal(1) : Decimal.pow(2, this.bought() / 2),
         Achievements.generatorMultiplier(), Infinities.infinityGeneratorMultiplier(), InfinityChallenge.multiplier(),
         (i === 1 && InfinityChallenge.isInfinityChallengeCompleted(3)) ? InfinityChallenge.infinityChallenge3Reward() : 1,
         InfinityChallenge.isInfinityChallengeCompleted(4) ? InfinityChallenge.infinityChallenge4Reward() : 1,
