@@ -157,7 +157,7 @@ let Generators = {
   nerfValue() {
     return Decimal.pow(2, Math.pow(2, 29)).pow(Chroma.effectOfColor(6));
   },
-  nerfExponent: -1 / 128,
+  nerfExponent: -1 / 320,
   nerf(x) {
     let nerfValue = this.nerfValue();
     if (x.gte(nerfValue)) {
