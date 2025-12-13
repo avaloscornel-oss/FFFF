@@ -2,22 +2,22 @@ let Chroma = {
   colors: [null, 'grey', 'purple', 'orange', 'cyan', 'green', 'red'],
   colorCosts: [
     null,
-    Decimal.pow(2, 4096),
-    Decimal.pow(2, 8192),
-    Decimal.pow(2, 12288),
+    Decimal.pow(2, 350),
+    Decimal.pow(2, 1800),
+    Decimal.pow(2, 3600),
+    Decimal.pow(2, 550),
+    Decimal.pow(2, 1000),
     Decimal.pow(2, Math.pow(2, 14)),
-    Decimal.pow(2, Math.pow(2, 15)),
-    Decimal.pow(2, Math.pow(2, 17)),
   ],
   // The third color formula has a special case for x < 256 so that having more EP
   // doesn't hurt for sufficiently small x (due to the power of Math.log2(x / 256) / 4 being negative).
   colorEffectFormulas: [
     null,
-    x => Math.pow(1 + x / 1024, 2.5),
+    x => Math.pow(1 + x / 1024, 5),
     x => Decimal.pow(1 + x / 64, 0.5),
     x => Decimal.pow((x >= 256) ? Math.max(EternityPoints.totalEPProducedThisComplexity().log2() / 4096, 1) : 2,
       Math.log2(x / 256) / 4).div(2).plus(1),
-    x => Decimal.pow(EternityGenerator(8).amount().max(1), 2 * Math.sqrt(x)),
+    x => Decimal.pow(EternityGenerator(8).amount().max(1), 10 * Math.sqrt(x)),
     x => Math.floor(Math.pow(16 * Math.log2(1 + x / 4096), ComplexityAchievements.effect(3, 4))),
     x => 1 + 3 * Math.pow(Math.log2(x / Math.pow(2, 18) + 1) * Eternities.totalEternitiesProducedThisComplexity().div(Math.pow(2, 54)).plus(1).log2(), 0.75) / 32
   ],
