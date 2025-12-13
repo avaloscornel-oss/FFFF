@@ -5,7 +5,7 @@ let InfinityChallenge = {
   ],
   requirements: [Infinity,
     Decimal.pow(2, 8192), Decimal.pow(2, 14000), Decimal.pow(2, 21768), Decimal.pow(2, 28264),
-    Decimal.pow(2, 49152), Decimal.pow(2, 53248), Decimal.pow(2, 57344), Decimal.pow(2, 61440),
+    Decimal.pow(2, 44152), Decimal.pow(2, 53248), Decimal.pow(2, 57344), Decimal.pow(2, 61440),
   ],
   infinityChallengeButtonText(x) {
     if (this.isInfinityChallengeRunning(x)) {
