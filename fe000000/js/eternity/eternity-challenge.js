@@ -49,7 +49,7 @@ let EternityChallenge = {
     'eternity points', 'eternity stars',
   ],
   costs: [Infinity, 5, 6, 8, 10, 12, 15, 20, 24],
-  totalCompletionsRewardThresholds: [null, 8, 16, 24, 32],
+  totalCompletionsRewardThresholds: [null, 8, 8, 8, 8],
   pressEternityChallengeButton(x) {
     if (this.isEternityChallengeRunning(x)) {
       this.exitEternityChallenge();
