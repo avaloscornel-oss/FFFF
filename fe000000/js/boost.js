@@ -137,7 +137,7 @@ let Boost = {
     return EternityChallenge.getTotalCompletionsRewardEffect(1) * ComplexityAchievements.effect(1, 1) / 16384;
   },
   boostPowerStart() {
-    return 320;
+    return 0;
   },
   produceBoostPower(diff) {
     player.boostPower += this.boostPowerPerSecond() * diff;
