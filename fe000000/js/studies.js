@@ -12,9 +12,9 @@ let STUDY_EFFECTS = [
   () => Decimal.pow(32, Math.pow(Math.log2(
     1 + player.stats.timeSinceEternity * (1 + EternityStars.amount().max(1).log2() / 1024) / 64), 4 / 3)),
   () => Decimal.pow(Math.max(1, Studies.totalTheorems()), 10),
-  x => Decimal.pow(2, 4096 * x),
-  x => Decimal.pow(2, x * Math.sqrt(Chroma.totalColorAmount()) / 2),
-  x => Decimal.pow(Math.max(Chroma.amount(), 1), x),
+  x => Decimal.pow(2, 409600 * x),
+  x => Decimal.pow(2, x * Math.sqrt(Chroma.totalColorAmount()) * 100),
+  x => Decimal.pow(Math.max(Chroma.amount(), 1), x**2),
   x => 1 + x * Studies.totalTheorems() / 1024,
 ]
 
