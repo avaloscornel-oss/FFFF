@@ -18,6 +18,6 @@ let EternityStars = {
     return this.doEternityStarsDoAnything() ? this.amount() : new Decimal(1);
   },
   power() {
-    return this.doEternityStarsDoAnything() ? 1 + Math.log2(this.amount().log(2)) / 512 : 1;
+    return this.doEternityStarsDoAnything() ? 1 + Math.log2(this.amount().log(2)) / 128 : 1;
   }
 }
