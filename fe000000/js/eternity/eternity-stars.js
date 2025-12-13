@@ -15,7 +15,7 @@ let EternityStars = {
   multiplier() {
     // Only give a boost if the player has at least one eternity
     // (otherwise they don't even see this mechanic).
-    return this.doEternityStarsDoAnything() ? this.amount() : new Decimal(1);
+    return this.doEternityStarsDoAnything() ? Decimal.pow(this.amount(),5) : new Decimal(1);
   },
   power() {
     return this.doEternityStarsDoAnything() ? 1 + Math.log2(this.amount().log(2)) / 64 : 1;
