@@ -158,13 +158,13 @@ let InfinityChallenge = {
     return 8 / (8 + player.stats.prestigesThisInfinity);
   },
   infinityChallenge3Reward() {
-    return 1 + Prestige.prestigePower().log(2);
+    return Math.pow(1 + Prestige.prestigePower().log(2),2);
   },
   infinityChallenge4Pow() {
-    return Math.min(player.stats.timeSincePurchase / 16, 1);
+    return Math.min(player.stats.timeSincePurchase / 8, 1);
   },
   infinityChallenge4Reward() {
-    return 1 + player.stats.timeSinceInfinity / 64;
+    return Math.pow(1 + player.stats.timeSinceInfinity / 64,2);
   },
   infinityChallenge5Pow() {
     return Math.min(1, Math.log2(Math.max(Stars.amount().log(2), 1)) / 16);
