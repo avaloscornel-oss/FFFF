@@ -1,6 +1,6 @@
 let InfinityChallenge = {
   goals: [Infinity,
-    Decimal.pow(2, 512), Decimal.pow(2, 4096), Decimal.pow(2, 14336), Decimal.pow(2, 32768),
+    Decimal.pow(2, 728), Decimal.pow(2, 6000), Decimal.pow(2, 14336), Decimal.pow(2, 32768),
     Decimal.pow(2, 24576), Decimal.pow(2, 20480), Decimal.pow(2, 22528), Decimal.pow(2, 57344),
   ],
   requirements: [Infinity,
