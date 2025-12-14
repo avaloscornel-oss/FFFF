@@ -63,7 +63,8 @@ let Galaxy = {
     return player.galaxies.unlocked;
   },
   unlockCost() {
-    return Decimal.pow(2, 1024);
+    // Never unlock galaxies it is so unbalanced
+    return Decimal.pow(2, 1e300);
   },
   canUnlock() {
     return !this.isUnlocked() && player.complexityPoints.gte(this.unlockCost());
